@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Learning Plan (Elon Musk Method)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+      background: #f9f9f9;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    .phase {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .topic {
+      margin: 15px 0;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      background: #f0f8ff;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    .challenge {
+      background: #e8f4fc;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .hidden {
+      display: none;
+    }
+    #solution {
+      background: #e8f4fc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 JavaScript Learning Plan (Elon Musk Method)</h1>
+  <p><em>Master JavaScript by solving real-world problems.</em></p>
+
+  <!-- Phase 1 -->
+  <div class="phase">
+    <h2>Phase 1: Core Fundamentals (Week 1-2)</h2>
+    
+    <div class="topic">
+      <h3>1. Variables & Data Types</h3>
+      <p><strong>Source:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations" target="_blank">MDN Variables</a></p>
+      <div class="challenge">
+        <p><strong>Challenge:</strong> Store your name, age, and whether you like JS in variables. Print them.</p>
+        <button onclick="toggleSolution('solution1')">Show Solution</button>
+        <div id="solution1" class="hidden">
+          <pre><code>const name = "Alice";
+const age = 25;
+const likesJS = true;
+
+console.log(name, age, likesJS);</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic">
+      <h3>2. Operators & Expressions</h3>
+      <p><strong>Source:</strong> <a href="https://javascript.info/operators" target="_blank">JavaScript.info Operators</a></p>
+      <div class="challenge">
+        <p><strong>Challenge:</strong> Calculate the area of a rectangle and check if it’s greater than 100.</p>
+        <button onclick="toggleSolution('solution2')">Show Solution</button>
+        <div id="solution2" class="hidden">
+          <pre><code>const width = 10;
+const height = 15;
+const area = width * height;
+
+console.log(area > 100); // true or false</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 2 -->
+  <div class="phase">
+    <h2>Phase 2: Data Structures (Week 3-4)</h2>
+    
+    <div class="topic">
+      <h3>5. Arrays & Array Methods</h3>
+      <p><strong>Source:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Arrays</a></p>
+      <div class="challenge">
+        <p><strong>Challenge:</strong> Given an array of numbers, filter even numbers and calculate their sum.</p>
+        <button onclick="toggleSolution('solution5')">Show Solution</button>
+        <div id="solution5" class="hidden">
+          <pre><code>const numbers = [1, 2, 3, 4, 5, 6];
+const evens = numbers.filter(num => num % 2 === 0);
+const sum = evens.reduce((total, num) => total + num, 0);
+
+console.log(sum); // 12</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 3 -->
+  <div class="phase">
+    <h2>Phase 3: Real-World Problems (Week 5-6)</h2>
+    
+    <div class="topic">
+      <h3>8. Working with Tabular Data</h3>
+      <div class="challenge">
+        <p><strong>Challenge:</strong> Given an array of employees, find the highest-paid employee.</p>
+        <button onclick="toggleSolution('solution8')">Show Solution</button>
+        <div id="solution8" class="hidden">
+          <pre><code>const employees = [
+  { name: "Alice", salary: 50000 },
+  { name: "Bob", salary: 60000 },
+  { name: "Charlie", salary: 55000 }
+];
+
+const highestPaid = employees.reduce((max, emp) => 
+  emp.salary > max.salary ? emp : max
+);
+
+console.log(highestPaid.name); // Bob</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="phase">
+    <h2>Phase 4: Mini-Projects (Week 7-8)</h2>
+    
+    <div class="topic">
+      <h3>Final Challenge: Sales Data Analyzer</h3>
+      <div class="challenge">
+        <p><strong>Problem:</strong> A company has sales data in an array of objects. Write a script that:</p>
+        <ul>
+          <li>Calculates total revenue.</li>
+          <li>Finds the best-selling product.</li>
+          <li>Groups sales by category.</li>
+        </ul>
+        <button onclick="toggleSolution('solutionFinal')">Show Solution</button>
+        <div id="solutionFinal" class="hidden">
+          <pre><code>const sales = [
+  { product: "Laptop", price: 999, quantity: 5, category: "Electronics" },
+  { product: "Phone", price: 699, quantity: 10, category: "Electronics" },
+  { product: "Desk", price: 250, quantity: 3, category: "Furniture" }
+];
+
+// 1. Total Revenue
+const totalRevenue = sales.reduce((sum, item) => 
+  sum + (item.price * item.quantity), 0);
+
+// 2. Best-Selling Product (by quantity)
+const bestSeller = sales.reduce((best, item) => 
+  item.quantity > best.quantity ? item : best);
+
+// 3. Group by Category
+const salesByCategory = sales.reduce((groups, item) => {
+  if (!groups[item.category]) groups[item.category] = [];
+  groups[item.category].push(item);
+  return groups;
+}, {});
+
+console.log({ totalRevenue, bestSeller, salesByCategory });</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      solution.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
